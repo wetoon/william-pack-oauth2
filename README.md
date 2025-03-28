@@ -1,15 +1,48 @@
 # oauth2
 
-To install dependencies:
+Google library for generate oauth2 token
 
+## Installation
+
+Install via npm
 ```bash
-bun install
+npm install @william-pack/oauth2
 ```
 
-To run:
-
+or using bun
 ```bash
-bun run index.ts
+bun add @william-pack/oauth2
 ```
 
-This project was created using `bun init` in bun v1.2.5. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Usage
+
+ESM
+```ts
+import { createRefreshToken } from '@william-pack/oauth2'
+```
+
+CommonJS
+```ts
+const { createRefreshToken } = require('@william-pack/oauth2')
+```
+
+## Create Refresh Token
+
+```ts
+const token = await createRefreshToken(
+    {
+        client_email: "string"
+        private_key: "string"
+    },
+    ["https://www.googleapis.com/auth/scope"]
+)
+```
+
+## Repository
+
+[GitHub Repository](https://github.com/wetoon/william-pack-oauth2)
+[NPM Package](https://www.npmjs.com/package/@william-pack/oauth2)
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
