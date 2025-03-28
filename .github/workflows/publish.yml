@@ -1,5 +1,8 @@
 name: Publish Google Library
 
+permissions:
+    id-token: write
+
 on:
     release:
         types: [ published ]
