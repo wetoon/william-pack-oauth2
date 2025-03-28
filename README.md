@@ -31,17 +31,17 @@ const { createRefreshToken } = require('@william-pack/oauth2')
 ```ts
 const token = await createRefreshToken(
     {
-        client_email: "string"
+        client_email: "string",
         private_key: "string"
     },
     ["https://www.googleapis.com/auth/scope"]
-)
+) // Promise< string | undefined >
 ```
 
 ## Repository
 
-[GitHub Repository](https://github.com/wetoon/william-pack-oauth2)
-[NPM Package](https://www.npmjs.com/package/@william-pack/oauth2)
+- [GitHub Repository](https://github.com/wetoon/william-pack-oauth2)
+- [NPM Package](https://www.npmjs.com/package/@william-pack/oauth2)
 
 ## License
 
