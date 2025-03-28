@@ -1,0 +1,44 @@
+{
+    "name": "@william-pack/oauth2",
+    "version": "1.0.0",
+    "author": "William-pack",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wetoon/william-pack-oauth2.git"
+    },
+    "exports": {
+        "types": "./dist/index.d.ts",
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+    },
+    "files": [
+        "dist",
+        "LICENSE",
+        "README.md"
+    ],
+    "devDependencies": {
+        "@types/bun": "latest",
+        "bun-plugin-dts": "^0.3.0"
+    },
+    "peerDependencies": {
+        "typescript": "^5"
+    },
+    "bugs": {
+        "url": "https://github.com/wetoon/william-pack-oauth2/issues"
+    },
+    "description": "Google library generate oauth2 token",
+    "homepage": "https://github.com/wetoon/william-pack-oauth2#readme",
+    "keywords": [
+        "google",
+        "oauth2",
+        "refresh",
+        "token"
+    ],
+    "engines": {
+        "node": ">=18"
+    },
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    }
+}
