@@ -27,7 +27,10 @@ const { createRefreshToken } = require('@william-pack/oauth2')
 ```
 
 ## Create Refresh Token
-
+### Require
+- Google Service Account only
+- Google Api scopes
+### Example
 ```ts
 const token = await createRefreshToken(
     {
@@ -38,7 +41,7 @@ const token = await createRefreshToken(
 ) // Promise< string | undefined >
 ```
 
-## Repository
+## Linked
 
 - [GitHub Repository](https://github.com/wetoon/william-pack-oauth2)
 - [NPM Package](https://www.npmjs.com/package/@william-pack/oauth2)
