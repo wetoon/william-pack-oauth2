@@ -2,7 +2,7 @@
 import { build } from "bun";
 import dts from "bun-plugin-dts";
 
-const fnRemoveComments = function() {
+const fnRemoveComments = async function() {
     const filesToProcess = [
         { name: 'index.cjs', comment: '// @bun @bun-cjs' },
         { name: 'index.mjs', comment: '// @bun' },
@@ -11,11 +11,11 @@ const fnRemoveComments = function() {
     for ( const { name, comment } of filesToProcess ) {
         const filePath = `./dist/${name}`;
         try {
-            const content = await Bun.file(filePath).text();
+            const content = await Bun.file( filePath ).text();
             const lines = content.split('\n');
-            if (lines[0].trim() === comment) {
+            if ( lines[0].trim() === comment ) {
                 lines.shift();
-                while (lines.length > 0 && lines[0].trim() === '') {
+                while ( lines.length > 0 && lines[0].trim() === '' ) {
                     lines.shift();
                 }
                 const newContent = lines.join('\n');
