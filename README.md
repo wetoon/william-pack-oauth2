@@ -1,6 +1,6 @@
-# oauth2
+# Google oAuth2 v1.2.0
 
-Google library for generate oauth2 token
+Google library for generate oauth2 refresh token
 
 ## Installation
 
